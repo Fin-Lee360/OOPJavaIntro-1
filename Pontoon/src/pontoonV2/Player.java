@@ -1,6 +1,6 @@
 /*
  * Sol Campbell 27/09/2018
- * Version 2.0 of pontoon
+ * Version 2.1 of pontoon
  */
 package pontoonV2;
 
@@ -13,7 +13,7 @@ public class Player
 	
 	private int card1;		// declarations
 	private int card2;
-	int total;
+	static int total;		//static so can be used throughout
 	private int cardNew;
 	private String choice;
 	
@@ -66,5 +66,10 @@ public class Player
 	{
 		total = total + cardNew;
 		System.out.println("Your total is " +total+".");
+	}
+	
+	public static int getPlayerTotal() // allows the players total to be accessed in other classes
+	{
+		return total;
 	}
 }

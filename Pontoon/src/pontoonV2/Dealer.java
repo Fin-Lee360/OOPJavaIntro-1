@@ -1,6 +1,6 @@
 /*
  * Sol Campbell 27/09/2018
- * Version 2.0 of pontoon
+ * Version 2.1 of pontoon
  */
 package pontoonV2;
 
@@ -8,7 +8,7 @@ public class Dealer
 {
 	private int dealerCard1;		// declarations
 	private int dealerCard2;
-	int dealerTotal;
+	static int dealerTotal;			//static so can be used throughout
 	
 	public void dealer() // constructor
 	{
@@ -26,5 +26,11 @@ public class Dealer
 	{
 		int dealernewCard = (int)(Math.random()*10)+1;
 		dealerTotal = dealerTotal + dealernewCard;
+	}
+	
+	
+	public static int getDealerFinal() // allows dealers total to be accessed in other classes
+	{
+		return dealerTotal;
 	}
 }
